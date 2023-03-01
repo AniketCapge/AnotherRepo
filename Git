@@ -1,0 +1,843 @@
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git --version
+git version 2.39.2.windows.1
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config --global user.name "Aniket Aggarwal"
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config --global user.email "aniket.aggarwal@capgemini.com"                
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config user.name
+Aniket Aggarwal
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config user.email
+aniket.aggarwal@capgemini.com
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config list
+error: key does not contain a section: list
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Aniket Aggarwal
+user.email=aniket.aggarwal@capgemini.com
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git man
+git: 'man' is not a git command. See 'git --help'.
+
+The most similar command is
+        am
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ cd c:\Users\ANIKAGGA\Documents\aniket
+bash: cd: c:UsersANIKAGGADocumentsaniket: No such file or directory
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ cd Documents
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents
+$ cd aniket
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ ls
+abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ pwd
+/c/Users/ANIKAGGA/Documents/aniket
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ ^C
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ git init
+Initialized empty Git repository in C:/Users/ANIKAGGA/Documents/aniket/.git/
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ cd .git
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket/.git (GIT_DIR!)
+$ ls
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket/.git (GIT_DIR!)
+$ cd ..
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ echo "# aniket" >> README.md
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+README.md  abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ anietdytcw
+bash: anietdytcw: command not found
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   abcde.txt
+
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git commit -m "first commit"
+[master (root-commit) 32f0716] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+README.md  abcde.txt  fghij.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fghij.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git --version
+git version 2.39.2.windows.1
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config --global user.name "Aniket Aggarwal"
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config --global user.email "aniket.aggarwal@capgemini.com"                
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config user.name
+Aniket Aggarwal
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config user.email
+aniket.aggarwal@capgemini.com
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config list
+error: key does not contain a section: list
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=Aniket Aggarwal
+user.email=aniket.aggarwal@capgemini.com
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git man
+git: 'man' is not a git command. See 'git --help'.
+
+The most similar command is
+        am
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ git --help
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ cd c:\Users\ANIKAGGA\Documents\aniket
+bash: cd: c:UsersANIKAGGADocumentsaniket: No such file or directory
+
+anikagga@INLEN8520065825 MINGW64 ~
+$ cd Documents
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents
+$ cd aniket
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ ls
+abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ pwd
+/c/Users/ANIKAGGA/Documents/aniket
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ ^C
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket
+$ git init
+Initialized empty Git repository in C:/Users/ANIKAGGA/Documents/aniket/.git/
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ cd .git
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket/.git (GIT_DIR!)
+$ ls
+HEAD  config  description  hooks/  info/  objects/  refs/
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket/.git (GIT_DIR!)
+$ cd ..
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ echo "# aniket" >> README.md
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+README.md  abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ anietdytcw
+bash: anietdytcw: command not found
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   abcde.txt
+
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git commit -m "first commit"
+[master (root-commit) 32f0716] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 abcde.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+README.md  abcde.txt  fghij.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fghij.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git add .
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   fghij.txt
+
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git commit -m "second commit"
+[master 7088485] second commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 fghij.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git remote add origin https://github.com/AniketCapge/MyfirstRepoOnGit
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 513 bytes | 513.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/AniketCapge/MyfirstRepoOnGit
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   abcde.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git add .
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git commit -m "Another commit"
+[master fa3a66e] Another commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 346 bytes | 346.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/MyfirstRepoOnGit
+   7088485..fa3a66e  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        klmno.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git add .
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   klmno.txt
+
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git commit -m "hello"
+[master c6ce664] hello
+ 1 file changed, 1 insertion(+)
+ create mode 100644 klmno.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AniketCapge/MyfirstRepoOnGit
+   fa3a66e..c6ce664  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ nano klmno.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ get status
+bash: get: command not found
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   klmno.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git add .
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git push -u origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git commit -m "abcde"
+[master 03c8805] abcde
+ 1 file changed, 3 insertions(+)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/AniketCapge/MyfirstRepoOnGit
+   c6ce664..03c8805  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ ls
+README.md  abcde.txt  fghij.txt  klmno.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/aniket (master)
+$ cd ..
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents
+$ cd anotherProject/
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject
+$ git init
+Initialized empty Git repository in C:/Users/ANIKAGGA/Documents/anotherProject/.git/
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m"hello"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add .
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m "hello"
+[master (root-commit) f751265] hello
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git remote add origin https://github.com/AniketCapge/AnotherRepo.git
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 214.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/AnotherRepo.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ nano hello.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add .
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m "hello"
+[master 14a3d32] hello
+ 1 file changed, 2 insertions(+)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 270 bytes | 270.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/AnotherRepo.git
+   f751265..14a3d32  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ nano hello.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git --diff
+unknown option: --diff
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git diff
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/hello.txt b/hello.txt
+index eeb4e0b..eca6a86 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1,2 +1,2 @@
+ my greeting is namaste
+-
++im proud hindu
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add .
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m"hello"
+[master 2891fd4] hello
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 283 bytes | 283.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/AnotherRepo.git
+   14a3d32..2891fd4  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git diff
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ nano hello.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ get diff
+bash: get: command not found
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git diff
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+diff --git a/hello.txt b/hello.txt
+index eca6a86..9a50c45 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1,2 +1,3 @@
+ my greeting is namaste
+ im proud hindu
++
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add .
+warning: in the working copy of 'hello.txt', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git diff
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m"hello"
+[master b394c7d] hello
+ 1 file changed, 1 insertion(+)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/AnotherRepo.git
+   2891fd4..b394c7d  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ nano abc.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        abc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git diff
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add .
+warning: in the working copy of 'abc.txt', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m
+error: switch `m' requires a value
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit
+Aborting commit due to empty commit message.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m""
+error: switch `m' requires a value
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m" "
+Aborting commit due to empty commit message.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m"kjhgfdsfghjk"
+[master 24e57f9] kjhgfdsfghjk
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abc.txt
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/AnotherRepo.git
+   b394c7d..24e57f9  master -> master
+branch 'master' set up to track 'origin/master'.
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ echo "my readme file" >> README.md
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git add .
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git commit -m"hello"
+[master 42baacb] hello
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+anikagga@INLEN8520065825 MINGW64 ~/Documents/anotherProject (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 322 bytes | 322.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/AniketCapge/AnotherRepo.git
+   24e57f9..42baacb  master -> master
+branch 'master' set up to track 'origin/master'.
+
+
